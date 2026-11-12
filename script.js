@@ -1,41 +1,65 @@
-// ===== MENU TOGGLE FOR MOBILE =====
-const navLinks = document.querySelector('.nav-links');
-const menuIcon = document.createElement('div');
-menuIcon.classList.add('menu-icon');
-menuIcon.innerHTML = '&#9776;'; // hamburger icon
-document.querySelector('.navbar').prepend(menuIcon);
+// Mobile navigation
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-// Toggle menu visibility on click
-menuIcon.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
 });
 
-// ===== SMOOTH SCROLL FOR NAV LINKS =====
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const targetId = link.getAttribute('href');
-    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-    navLinks.classList.remove('active'); // close menu after click (mobile)
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
   });
 });
 
-// ===== CONTACT FORM HANDLER =====
-const form = document.getElementById('contactForm');
-const thankYou = document.getElementById('thankyouMessage');
+// Highlight the active navigation item while scrolling
+const sections = document.querySelectorAll("main section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const response = await fetch(form.action, {
-    method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navItems.forEach((item) => {
+        item.classList.toggle("active", item.getAttribute("href") === `#${entry.target.id}`);
+      });
+    }
   });
-  if (response.ok) {
-    thankYou.style.display = 'block';
-    form.reset();
-  } else {
-    alert('Oops! Something went wrong.');
+}, { rootMargin: "-35% 0px -55% 0px" });
+
+sections.forEach((section) => sectionObserver.observe(section));
+
+// Automatically update footer year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Contact form (Formspree)
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  formMessage.textContent = "Sending...";
+  const submitButton = contactForm.querySelector("button[type='submit']");
+  submitButton.disabled = true;
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" }
+    });
+
+    if (response.ok) {
+      formMessage.textContent = "Thank you! Your message has been sent.";
+      contactForm.reset();
+    } else {
+      formMessage.textContent = "Message could not be sent. Please try again or email me directly.";
+    }
+  } catch (error) {
+    formMessage.textContent = "Network error. Please try again or email me directly.";
+  } finally {
+    submitButton.disabled = false;
   }
 });

@@ -3,194 +3,427 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sathvika | Portfolio</title>
+  <meta name="description" content="Portfolio of Sathvika Nidadavolu — Software Developer, ServiceNow Developer and AI/ML enthusiast.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Sathvika Nidadavolu | Developer Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar">
-    <h2 class="logo">Sathvika</h2>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#tech-stack">Tech Stack</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Change the name, role and links in this file to personalize your portfolio. -->
 
- <!-- ===== HOME SECTION ===== -->
-<section id="home" class="hero">
-  <div class="hero-container">
-    
-    <div class="hero-text">
-      <h1>Hi, I'm <span class="highlight">Sathvika Nidadavolu</span></h1>
-      <br>
-      <h3>Passionate Developer | Building Solutions, Learning Every Day</h3>
-      <br>
-      <!-- Social Links just below subtitle -->
-      <div class="social-links">
-         <h3 class="connect-text"><b>Connect with me :</b></h3>
-         
-        <div class="social-icons">
-          <a href="mailto:sathvika2955@gmail.com" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email">
-            <span>Email</span>
-          </a>
-          <a href="https://www.linkedin.com/in/sathvika-nidadavolu-563563259/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
-            <span>LinkedIn</span>
-          </a>
-          <a href="https://github.com/Sathvika2955" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
-            <span>GitHub</span>
-          </a>
-          <a href="https://leetcode.com/u/sathvika2955/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg" alt="LeetCode">
-            <span>LeetCode</span>
-          </a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Sathvika home">SN<span>.</span></a>
+
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact" class="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> OPEN TO SOFTWARE / DEVELOPER OPPORTUNITIES</p>
+          <p class="intro-line">Hello, I'm</p>
+          <h1>Sathvika <span>Nidadavolu</span></h1>
+          <h2 class="hero-role">Software Developer <span>|</span> ServiceNow Developer <span>|</span> AI/ML Enthusiast</h2>
+          <p class="hero-description">
+            I build practical software solutions across application development, workflow automation
+            and AI-powered applications. I enjoy learning new technologies and turning ideas into
+            useful products.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <span>↗</span></a>
+            <a class="button button-secondary" href="#contact">Get in touch</a>
+          </div>
+
+          <div class="social-row" aria-label="Social profiles">
+            <a href="mailto:sathvika2955@gmail.com" aria-label="Email">Email</a>
+            <a href="https://www.linkedin.com/in/sathvika-nidadavolu-563563259/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/Sathvika2955" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://leetcode.com/u/sathvika2955/" target="_blank" rel="noreferrer">LeetCode ↗</a>
+            <!-- Add your YouTube channel URL here when ready. -->
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-glow"></div>
+          <div class="photo-frame">
+            <!-- Keep your existing image at images/mypic.jpg -->
+            <img src="images/mypic.jpg" alt="Portrait of Sathvika Nidadavolu">
+          </div>
+          <div class="floating-card floating-card-top">
+            <span class="mini-icon">⌘</span>
+            <div><strong>Build</strong><small>Learn · Create · Improve</small></div>
+          </div>
+          <div class="floating-card floating-card-bottom">
+            <span class="mini-icon">✦</span>
+            <div><strong>Always learning</strong><small>Technology & problem solving</small></div>
+          </div>
         </div>
       </div>
-     
+      <a class="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">A LITTLE ABOUT ME</p>
+          <h2>Curious mind. <span>Practical builder.</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I am a Computer Science graduate in the Artificial Intelligence and Machine Learning
+              specialization from Pragati Engineering College. My technical interests include
+              software development, ServiceNow application development, Salesforce and AI-powered
+              solutions.
+            </p>
+            <p>
+              I have worked on projects involving workflow automation, application development,
+              computer vision and document-based question answering. I enjoy understanding a
+              problem end to end—from requirements and design to implementation and testing.
+            </p>
+            <p>
+              Outside development, I create beginner-friendly ServiceNow learning content through
+              <strong>SkillBridge Careers</strong> and enjoy sharing what I learn with others.
+            </p>
+          </div>
+
+          <div class="about-facts">
+            <article class="fact-card">
+              <span class="fact-number">01</span>
+              <h3>Development</h3>
+              <p>Java, Python, web development and API-based applications.</p>
+            </article>
+            <article class="fact-card">
+              <span class="fact-number">02</span>
+              <h3>Enterprise platforms</h3>
+              <p>ServiceNow workflows, application development and Salesforce.</p>
+            </article>
+            <article class="fact-card">
+              <span class="fact-number">03</span>
+              <h3>AI/ML exploration</h3>
+              <p>RAG concepts, LLM integrations and computer vision projects.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT I WORK WITH</p>
+          <h2>Technical <span>toolkit</span></h2>
+          <p class="section-intro">Technologies and platforms I have used or am actively developing skills in.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-card-head"><span class="skill-symbol">01</span><h3>Programming</h3></div>
+            <div class="tags">
+              <span>Java</span><span>Python</span><span>SQL</span><span>JavaScript</span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-card-head"><span class="skill-symbol">02</span><h3>Web & Backend</h3></div>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>React.js</span><span>Flask</span><span>FastAI</span><span>REST APIs</span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-card-head"><span class="skill-symbol">03</span><h3>AI / Machine Learning</h3></div>
+            <div class="tags">
+              <span>Machine Learning</span><span>Numpy</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-card-head"><span class="skill-symbol">04</span><h3>Enterprise Platforms</h3></div>
+            <div class="tags">
+              <span>ServiceNow</span><span>Flow Designer</span><span>Service Catalog</span><span>Salesforce</span><span>Salesforce Flow</span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-card-head"><span class="skill-symbol">05</span><h3>Databases & Tools</h3></div>
+            <div class="tags">
+              <span>MySQL</span><span>SQLite</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Postman</span>
+            </div>
+          </article>
+        </div>
+        <p class="small-note"></p>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ACADEMIC BACKGROUND</p>
+          <h2>My <span>education</span></h2>
+        </div>
+        <div class="education-list">
+          <article class="education-item">
+            <div class="education-date">2022 — 2026</div>
+            <div class="education-detail">
+              <h3>B.Tech — Computer Science and Engineering (AI & ML)</h3>
+              <p>Pragati Engineering College, Andhra Pradesh</p>
+              <p class="muted">CGPA : 8.89</p>
+            </div>
+          </article>
+          <article class="education-item">
+            <div class="education-date">2020 — 2022</div>
+            <div class="education-detail">
+              <h3>Intermediate — MPC</h3>
+              <p>Pragati Junior College, Andhra Pradesh</p>
+              <p class="muted">Percentage: 95.8%</p>
+            </div>
+          </article>
+          <article class="education-item">
+            <div class="education-date">2019 — 2020</div>
+            <div class="education-detail">
+              <h3>SSC</h3>
+              <p>Bhashyam High School, Andhra Pradesh</p>
+              <p class="muted">Percentage: 96.6%</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & LEADERSHIP -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">LEARNING & CONTRIBUTIONS</p>
+          <h2>Experience and <span>activities</span></h2>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <p class="card-kicker">INTERNSHIP / LEARNING EXPERIENCE</p>
+            <h3>Infosys Springboard</h3>
+            <p>Completed learning and project-oriented activities through Infosys Springboard. Add the exact program name, dates and work completed.</p>
+            <span class="editable-label">NOV 2025- JAN 2026</span>
+          </article>
+          
+        
+          <article class="experience-card">
+            <p class="card-kicker">CONTENT CREATION</p>
+            <h3>SkillBridge Careers</h3>
+            <p>Creating beginner-friendly ServiceNow tutorials and learning resources covering platform fundamentals and practical demonstrations.</p>
+            <span class="editable-label">https://www.youtube.com/@SkillBridgeWithSathvika</span>
+          </article>
+          <article class="experience-card">
+            <p class="card-kicker">LEADERSHIP</p>
+            <h3>Head Coordinator — Strides</h3>
+            <p>Served as a department-level head coordinator for a national-level event, supporting coordination, communication and teamwork.</p>
+          </article>
+          <article class="experience-card">
+            <p class="card-kicker">COMMUNITY & LEARNING</p>
+            <h3>Google Arcade Facilitator</h3>
+            <p>Participated in the Google Arcade Facilitator Program and progressed to Ranger level.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>Projects I've <span>built</span></h2>
+          <p class="section-intro">A selection of application development, enterprise platform and AI/ML projects.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-featured">
+            <div class="project-topline"><span>AI / BACKEND</span><span class="project-index">01</span></div>
+            <h3>Policy Assistant</h3>
+            <p>A document-based question-answering assistant designed to help users retrieve relevant information from policy documents. The project explores Retrieval-Augmented Generation (RAG), document processing and LLM-powered responses.</p>
+            <div class="tags"><span>Python</span><span>FastAPI</span><span>RAG</span><span>LLM API</span><span>Vector Search</span></div>
+            <div class="project-links">
+              <a href="https://github.com/Sathvika2955/Policy-Assistant" target="_blank" rel="noreferrer">GitHub Link ↗</a>
+              
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>SOFTWARE DEVELOPMENT</span><span class="project-index">02</span></div>
+            <h3>Smart Parking System</h3>
+            <p>A project focused on simplifying parking-space monitoring and management. Add your exact implementation details, user flow and the role you personally developed.</p>
+            <div class="tags"><span>Java</span><span>Springboot</span><span>Maven</span></div>
+            <div class="project-links"><a href="https://github.com/Sathvika2955/Park-Ease-Smart-Parking-Spot-Finder" target="_blank" rel="noreferrer">GitHub Link ↗</a></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>SERVICENOW</span><span class="project-index">03</span></div>
+            <h3>Employee Onboarding</h3>
+            <p>Workflow-oriented employee onboarding solution designed to coordinate onboarding tasks and improve process visibility using ServiceNow capabilities.</p>
+            <div class="tags"><span>ServiceNow</span><span>Flow Designer</span><span>Workflow Automation</span></div>
+            <!-- <div class="project-links"><a href="https://github.com/Sathvika2955" target="_blank" rel="noreferrer">GitHub profile ↗</a></div> -->
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>SERVICENOW</span><span class="project-index">04</span></div>
+            <h3>Incident Management</h3>
+            <p>ServiceNow application work focused on recording, tracking and managing incidents through a structured incident lifecycle.</p>
+            <div class="tags"><span>ServiceNow</span><span>Incident Management</span><span>Platform Configuration</span></div>
+            <!-- <div class="project-links"><a href="https://github.com/Sathvika2955" target="_blank" rel="noreferrer">GitHub profile ↗</a></div> -->
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>SERVICENOW</span><span class="project-index">05</span></div>
+            <h3>Gadget Store — Service Catalog</h3>
+            <p>A Service Catalog mini-project with product categories, smartphone catalog items, form variables and an Order Guide demonstration.</p>
+            <div class="tags"><span>ServiceNow</span><span>Service Catalog</span><span>Catalog Items</span><span>Order Guide</span></div>
+            <!-- <div class="project-links"><a href="https://github.com/Sathvika2955" target="_blank" rel="noreferrer">GitHub profile ↗</a></div> -->
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>SALESFORCE</span><span class="project-index">06</span></div>
+            <h3>Application Role Tracker</h3>
+            <p>Salesforce application to track job/application roles and organize records using platform automation and data validation.</p>
+            <div class="tags"><span>Salesforce</span><span>Flows</span><span>Validation Rules</span><span>Reports</span></div>
+            <!-- <div class="project-links"><a href="https://github.com/Sathvika2955" target="_blank" rel="noreferrer">GitHub profile ↗</a></div> -->
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>AI / COMPUTER VISION</span><span class="project-index">07</span></div>
+            <h3>Emotion Detection</h3>
+            <p>Computer-vision project that analyzes facial expressions from image or webcam input to estimate emotions.</p>
+            <div class="tags"><span>Python</span><span>OpenCV</span><span>DeepFace</span></div>
+            <!-- <div class="project-links"><a href="https://github.com/Sathvika2955" target="_blank" rel="noreferrer">GitHub profile ↗</a></div> -->
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>IMAGE PROCESSING</span><span class="project-index">08</span></div>
+            <h3>Pencil Sketch Art</h3>
+            <p>Image-processing application that converts photographs into pencil-sketch-style images using OpenCV techniques.</p>
+            <div class="tags"><span>Python</span><span>OpenCV</span><span>Image Processing</span></div>
+            <!-- <div class="project-links"><a href="https://github.com/Sathvika2955" target="_blank" rel="noreferrer">GitHub profile ↗</a></div> -->
+          </article>
+       
+    </section>
+
+    <!-- CERTIFICATIONS -->
+   <section class="section" id="certifications">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">CREDENTIALS</p>
+      <h2>Certifications & <span>Learning</span></h2>
+    </div>
+
+    <div class="cert-grid">
+
+      <article class="cert-card">
+        <span class="cert-type">SERVICENOW</span>
+        <h3>Certified System Administrator (CSA)</h3>
+        <p>ServiceNow platform administration and configuration.</p>
+        <a href="https://drive.google.com/file/d/1OvmWBrAHXrtGnH31pOcF3htRy1uO8pjg/view"
+           target="_blank" rel="noopener noreferrer"
+           class="cert-link">View Certificate ↗</a>
+      </article>
+
+      <article class="cert-card">
+        <span class="cert-type">SERVICENOW</span>
+        <h3>Certified Application Developer (CAD)</h3>
+        <p>Application development on the ServiceNow platform.</p>
+        <a href="https://drive.google.com/drive/u/0/my-drive"
+           target="_blank" rel="noopener noreferrer"
+           class="cert-link">View Certificate ↗</a>
+      </article>
+
+      <article class="cert-card">
+        <span class="cert-type">SALESFORCE</span>
+        <h3>Salesforce Certified Platform Developer</h3>
+        <p>Platform development and application customization.</p>
+        <a href="https://drive.google.com/drive/u/0/my-drive"
+           target="_blank" rel="noopener noreferrer"
+           class="cert-link">View Certificate ↗</a>
+      </article>
+
+      <article class="cert-card">
+        <span class="cert-type">SALESFORCE</span>
+        <h3>Salesforce AI Associate</h3>
+        <p>Foundational learning in Salesforce AI concepts.</p>
+        <a href="https://drive.google.com/file/d/1tLjF5ZI-2A4rHzP4aJZqllXW1cgV4chX/view"
+           target="_blank" rel="noopener noreferrer"
+           class="cert-link">View Certificate ↗</a>
+      </article>
+
+      <article class="cert-card">
+        <span class="cert-type">NPTEL · IIT MADRAS</span>
+        <h3>The Joy of Computing Using Python</h3>
+        <p>Successfully completed with Silver badge.</p>
+        <a href="https://drive.google.com/drive/u/0/folders/1CuN1uZIixd94lXwt6L4FnB4fpfQhcRh2"
+           target="_blank" rel="noopener noreferrer"
+           class="cert-link">View Certificate ↗</a>
+      </article>
 
       
-    </div>
-    <div class="hero-image">
-      <img src="images/mypic.jpg" alt="Sathvika" class="profile-pic">
+
     </div>
   </div>
 </section>
 
-
-
-  <!-- ===== ABOUT SECTION ===== -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a passionate B.Tech student in Computer Science (AI & ML) with a strong foundation in Java, Python, and SQL. I enjoy using technology to solve real-world problems and continuously explore new domains.
-      <br><br>
-      I’ve earned certifications in ServiceNow Certified System Administrator (CSA), Certified Application Developer (CAD), Salesforce Platform Developer (PD), . I also developed the Application Role Tracker project in Salesforce to automate and streamline internal role tracking.
-      <br><br>
-      As the Head Coordinator for a national-level event, I strengthened my leadership, communication, and teamwork skills. My goal is to apply my technical and management abilities to build impactful, innovative solutions.
-    </p>
-  </section>
-
-  <!-- ===== TECH STACK SECTION ===== -->
-  <section id="tech-stack" class="tech-stack">
-    <h2>Tech Stack</h2>
-    <div class="tech-scroll">
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-        <span>Java</span>
-      </div>
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-        <span>Python</span>
-      </div>
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
-        <span>SQL</span>
-      </div>
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-        <span>HTML</span>
-      </div>
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-        <span>CSS</span>
-      </div>
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-        <span>JavaScript</span>
-      </div>
-      <div class="tech-item">
-        <img src="images/logo.svg" alt="ServiceNow">
-        <span>ServiceNow</span>
-      </div>
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce">
-        <span>Salesforce</span>
-      </div>
-      
-    </div>
-  </section>
-
-  <!-- ===== EDUCATION SECTION ===== -->
-  <section id="education" class="education">
-    <h2 class="section-title">Education</h2>
-    <div class="timeline">
-      <div class="timeline-container left">
-        <div class="timeline-content">
-          <h3>B.Tech in Computer Science (AIML)</h3>
-          <span class="date">2022 - 2026</span>
-          <p>Pragati Engineering College, Andhra Pradesh</p>
-          <p>CGPA: 8.95</p>
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>Have an opportunity or an idea? <span>Let's talk.</span></h2>
+          <p class="contact-description">Feel free to reach out for software development opportunities, collaborations or technical discussions.</p>
+          <a class="email-link" href="mailto:sathvika2955@gmail.com">sathvika2955@gmail.com ↗</a>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/sathvika-nidadavolu-563563259/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/Sathvika2955" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
         </div>
+
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mpwynrgd" method="POST">
+          <label for="name">Your name</label>
+          <input id="name" type="text" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Email address</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+
+          <button class="button button-primary submit-button" type="submit">Send message <span>↗</span></button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
       </div>
-      <div class="timeline-container right">
-        <div class="timeline-content">
-          <h3>Intermediate (MPC)</h3>
-          <span class="date">2020 - 2022</span>
-          <p>Pragati Junior College, Andhra Pradesh</p>
-          <p>Percentage: 95.8%</p>
-        </div>
-      </div>
-      <div class="timeline-container left">
-        <div class="timeline-content">
-          <h3>SSC</h3>
-          <span class="date">2019 - 2020</span>
-          <p>Bhashyam High School, Andhra Pradesh</p>
-          <p>Percentage: 96.6%</p>
-        </div>
-      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#home">SN<span>.</span></a>
+      <p>© <span id="year"></span> Sathvika Nidadavolu. All rights reserved.</p>
+      <a href="#home" class="back-top">Back to top ↑</a>
     </div>
-  </section>
-
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section id="projects" class="projects">
-    <h2>My Projects</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>Application Role Tracker</h3>
-        <p>Tracks job applications in Salesforce using Flows, Validation Rules, and Dashboards.</p>
-      </div>
-      <div class="project">
-        <h3>Emotion Detection</h3>
-        <p>Detects emotions in real-time using AI/ML models and webcam input.</p>
-      </div>
-      <div class="project">
-        <h3>Pencil Sketch Art</h3>
-        <p>Converts color images into pencil art using OpenCV and edge detection.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CERTIFICATIONS SECTION ===== -->
-  <section id="certifications" class="certifications">
-    <h2>Global Certifications</h2>
-    <ul>
-      <li>ServiceNow Certified System Administrator</li>
-      <li>ServiceNow Certified Application Developer</li>
-      <li>Salesforce Certified Platform Developer</li>
-    </ul>
-  </section>
-
-  <!-- ===== CONTACT SECTION ===== -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm" action="https://formspree.io/f/mpwynrgd" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-    <p id="thankyouMessage" style="display:none; color:#00e6e6; margin-top:10px;">✅ Thank you for contacting me!</p>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© 2025 Sathvika | All rights reserved</p>
   </footer>
 
   <script src="script.js"></script>
